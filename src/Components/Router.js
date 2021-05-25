@@ -1,5 +1,7 @@
 import React from "react";
 import { HashRouter as Router,Route } from 'react-router-dom';
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import styled from "styled-components"
 import Home from "../Home";
 import Movie from "../Routes/Movie"
 import Tv from "../Routes/Tv"
@@ -10,7 +12,7 @@ import Header from "./Header";
 
 
 
-export default ()=>{
+export default ({location})=>{
     return(
     <>
     <Router>

@@ -27,6 +27,7 @@ const H1 =styled.h1`
   font-size: 60px;
   opacity: 0.5;
   margin-bottom: 100px;
+  cursor:pointer;
   &:hover{
     color:red;
     opacity:0.5 ;
@@ -37,7 +38,10 @@ const H1 =styled.h1`
 const SPAN=styled.span`
   opacity: 0.8;
   font-weight: 500;
-
+  &:hover{
+    color:skyblue;
+    transition: color 0.5s ease-in-out;
+  }
 `;
 
 

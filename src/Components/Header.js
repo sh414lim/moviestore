@@ -17,7 +17,12 @@ const Title =styled.h1`
     justify-content: center;
     font-size: 40px;
     font-weight: 600;
-    color:rgba(0,0,0,0.5);
+    opacity: 0.4;
+        color:red;
+    &:hover{
+        color:skyblue;
+        transition:color 0.8s ease-in-out;
+    }
    
    
 
