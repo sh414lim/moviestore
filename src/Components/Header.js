@@ -3,12 +3,10 @@ import styled from "styled-components";
 import {Link, withRouter} from "react-router-dom";
 
 const Head = styled.header`
+    height: 28vh;
+    width: 100vw;
     display:grid;
-    grid-template-rows: repeat(2,150px);
-    grid-template-columns:repeat(1.1fr);
     gap:10px;
- 
-
 `;
 
 const Title =styled.h1`
@@ -16,15 +14,8 @@ const Title =styled.h1`
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    font-weight: 600;
     opacity: 0.4;
         color:red;
-    &:hover{
-        color:skyblue;
-        transition:color 0.8s ease-in-out;
-    }
-   
-   
 
 `;
 

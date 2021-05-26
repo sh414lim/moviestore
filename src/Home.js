@@ -5,6 +5,9 @@ import styled from "styled-components";
 
 const Header=styled.header`
   display: block;
+    width: 90vw;
+    margin-left: 80px;
+    padding: 20px;
 `;
 
 const IMG =styled.img`
