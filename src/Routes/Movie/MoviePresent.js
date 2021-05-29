@@ -5,13 +5,10 @@ import Poster from "../../Form/Poster";
 import Slider from "react-slick";
 
 const Container =styled.div`
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
 `;
 
 
 const Header=styled.header`
-    display: block;
     width: 100vw;
     height: 400px;
 

@@ -3,25 +3,24 @@ import styled from "styled-components";
 
 
 const Container =styled.div`
-
+    
     height: 500vh;  
     width: 100vw;
 `;
 
-const Title =styled.div`
+const Title =styled.div`    
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
 `;
 
 const Grid =styled.div`
-    display: grid;
-    grid-template-columns: repeat(4,2fr);
-    grid-template-rows: repeat(2,2fr);
-    gap: 30px;
-    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 50px;
     margin-top: 30px;
 `;
 
