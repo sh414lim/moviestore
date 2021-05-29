@@ -5,20 +5,33 @@ import Poster from "../../Form/Poster";
 import Slider from "react-slick";
 
 const Container =styled.div`
+    margin-top: 150px;
 `;
 
 
 const Header=styled.header`
     width: 100vw;
-    height: 400px;
+    height: 600px;
+margin-bottom: 60px;
+
+    
 
 `
 const IMG=styled.img`
-  width: 300px;
-height: 300px;
-box-shadow: 5px 5px rgba(0,0,0,0.6), -1em 0 .4em rgba(0,0,0,0.5);
+width: 500px;
+height: 500px;
+box-shadow: 10px 5px 5px rgba(0,0,0,0.8);
 border-radius: 10%;
-margin-top: 50px;
+
+`;
+
+const H1=styled.h1`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-weight: 600;
 `;
 
 const StyledSlider = styled(Slider)`
@@ -32,10 +45,10 @@ const StyledSlider = styled(Slider)`
 const settings={
     dots: false,
     centerMode: true,
-    centerPadding: '40px',
+    centerPadding: '10px',
 
     // 한 번에 스크롤 몇 개 보여줄 건가(대개 1을 사용함)
-    slidesToShow: 7,
+    slidesToShow: 3,
      // 자동 넘김을 할 것인가. 한다면 스피드는?
     autoplay: true,
     autoplaySpeed: 3000,
@@ -62,11 +75,11 @@ const settings={
         }
       }
     ]
-  }
+};
   const MoviePresenter=({loading,error,nowplaying})=> loading ? null : (
 <>
-
-        <Header>
+<Header>
+    <H1>Best Movie</H1>
         <StyledSlider {...settings}>
         <div><IMG src={require("../../images/2.jpg").default}/></div>
         <div><IMG src={require("../../images/2.jpg").default}/></div>
@@ -79,6 +92,7 @@ const settings={
       <div> <IMG src={require("../../images/5.jpg").default}/></div>
             </StyledSlider>
         </Header>
+    
     <Container> 
       {nowplaying && nowplaying.length > 0 && (
         <Form title="Now Playing">
@@ -97,6 +111,7 @@ const settings={
         </Form>
 )}
 </Container>
+
 </>
 )
 

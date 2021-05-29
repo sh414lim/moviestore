@@ -4,18 +4,21 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const Container =styled.div`
-  
-font-size:12px;
-padding:10px;
- 
+    font-size:12px;
+    padding:10px;
+    margin-left: 100px;
+
+    
 `;
 
 const ImageContainer=styled.div`
-
+    background-color: #ecf0f1;
+    padding: 50px;
     margin-bottom:5px;
     position: relative;
+    box-shadow: 5px 5px rgba(0,0,0,0.6), -1em 0 .4em rgba(0,0,0,0.5);
     &:hover{
-            opacity:0.3;
+            opacity:0.6;
 
     }
 `;
@@ -27,23 +30,31 @@ const Image=styled.div`
     background-size: cover;
     background-position:center center;
 transition: opacity 0.6s linear;
-    
-
+&:hover{
+    width: 300px;
+    height: 380px;
+    transition: width  0.5s ease-in-out;
+}
     
 `;
 
 const Rating=styled.span`
-color:yellow;
+color:black;
+font-size: 15px;
+font-weight: 600;
 `;
 
 const Title=styled.span`
     display:block;
     margin-bottom:10px;
+    font-size: 20px;
+    font-weight: 600;
 `;
 
 const Year = styled.span`
 font-size:10px;
     opacity:0.5;
+    font-weight: 600;
 `;
 
 
@@ -57,9 +68,9 @@ const Poster=({id,imageUrl,title,rating,year,isMovie=false})=>(
              : require("../assests/noPosterSmall.PNG") }/>
         <Rating>
             <span role="img" aria-label="rating">
-                ❤
+                $
             </span>{" "}
-            {rating}/10
+            {rating}000원
             </Rating>
     </ImageContainer>
     <Title>{title.length > 15 ? `${title.substring(0,15)}...`:title  }</Title>

@@ -5,17 +5,26 @@ import {Link, withRouter} from "react-router-dom";
 const Head = styled.header`
     height: 28vh;
     width: 100vw;
+    height: 200px;
     display:grid;
     gap:10px;
+    color: white;
+    &:hover{
+        opacity:0.3;
+        background-color: red;
+        transition: background-color 0.6s  ease-in-out  ;
+    }
+    margin-top: 50px;
+    margin-bottom: 50px;
 `;
 
 const Title =styled.h1`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
-    opacity: 0.4;
-        color:red;
+    font-size: 60px;
+    font-weight: 100;
+        color:black;
 
 `;
 
@@ -26,9 +35,8 @@ const Ul=styled.ul`
 `;
 
 const Li=styled.li`
-    opacity:0.5;
     &:hover{
-        color:red;
+        color:black;
         transition: color 0.6s ease-in-out;
     }
 `;

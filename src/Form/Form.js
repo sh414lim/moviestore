@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Container =styled.div`
     
-    height: 500vh;  
+    height: 300vh;  
     width: 100vw;
 `;
 
@@ -29,9 +29,7 @@ const Grid =styled.div`
 const Section = ({ title, children }) => (
     <Container>
       <Title>{title}</Title>
-      <Grid>
-            {children}
-          </Grid>
+      <Grid>{children}</Grid>
     </Container>
   );
 
