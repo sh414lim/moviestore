@@ -1,5 +1,5 @@
-import MoviePresent from "./MoviePresent";
 import React from "react"
+import MoviePresent from "./MoviePresent";
 import  {MovieApi}  from "../../api";
 
 
@@ -29,7 +29,7 @@ export default class MovieContainer extends React.Component{
         }catch{
                 this.setState({
                     error:"What...?"
-                })
+                });
         }finally{
                 this.setState({
                     loading:false
@@ -39,7 +39,6 @@ export default class MovieContainer extends React.Component{
     }
     render(){
         const {popular,toprated,upcoming,nowplaying,error,loading} =this.state;
-        console.log(this.state)
         return(
             <MoviePresent
             popular={popular}
