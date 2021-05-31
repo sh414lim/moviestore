@@ -13,7 +13,13 @@ export const MovieApi={
     popular:()=>api.get("/3/movie/popular"),
     toprated:()=>api.get("/3/movie/top_rated"),
     upcoming:()=>api.get("/3/movie/upcoming"),
-    nowplaying:()=>api.get("/3/movie/now_playing")
+    nowplaying:()=>api.get("/3/movie/now_playing"),
+    movieDetail:id=>
+    api.get(`movie/${id}`,{
+        params:{
+            append_to_response:"videos"
+        }
+    })
 }
 
 
@@ -46,6 +52,11 @@ popular:()=>api.get("/3/tv/popular",{
         language:"en",
     }
 
+}),
+showDetail:id=>api.get(`/3/tv/${id}`,{
+    params:{
+        append_to_response:"videos"
+    }
 })
 }
 

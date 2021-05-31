@@ -48,7 +48,6 @@ color:inherit;
 
 
 function Header({location:{pathname}}){
-    console.log(pathname)
 return(
     <>
     <Head>

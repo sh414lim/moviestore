@@ -9,6 +9,7 @@ import SignUp from "../Routes/SignUp"
 import Login from "../Routes/Login"
 import Search from "../Routes/Search"
 import Header from "./Header";
+import Detail from "../Routes/Detail";
 
 
 
@@ -19,8 +20,10 @@ export default ()=>{
         <Header/>
         <Switch>
         <Route path="/" exact component={Home}/>
-        <Route path="/movie/:id" component={Movie}/>
-        <Route path="/tv/:id" component={Tv}/>
+        <Route path="/movie" exact component={Movie}/>
+        <Route path="/movie/:id" component={Detail}/>
+        <Route path="/tv" exact component={Tv}/>
+        <Route path="/tv/:id" component={Detail}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={Login}/>
         <Route path="/search" component={Search}/>
