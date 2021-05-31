@@ -5,14 +5,13 @@ import Poster from "../../Form/Poster";
 import Slider from "react-slick";
 
 const Container =styled.div`
-    margin-top: 150px;
 `;
 
 
 const Header=styled.header`
     width: 100vw;
     height: 600px;
-margin-bottom: 60px;
+margin-bottom: 80px;
 
     
 
@@ -76,7 +75,7 @@ const settings={
       }
     ]
 };
-  const MoviePresenter=({loading,error,nowplaying})=> loading ? null : (
+  const MoviePresenter=({loading,error,nowplaying,toprated,upcoming,popular})=> loading ? null : (
 <>
 <Header>
     <H1>Best Movie</H1>
@@ -109,6 +108,68 @@ const settings={
          
        )}
         </Form>
+        
+        
+)}
+</Container>
+<Container> 
+      {toprated && toprated.length > 0 && (
+        <Form title="Top Rated">
+          {toprated.map(movie =>
+           <Poster
+           key={movie.id}
+           id={movie.id}
+           imageUrl={movie.poster_path}
+           title={movie.original_title}
+           rating={movie.vote_average}
+           year={movie.release_date.substring(0, 4)}
+           isMovie={true}
+         />
+         
+       )}
+        </Form>
+        
+        
+)}
+</Container>
+<Container> 
+      {upcoming && upcoming.length > 0 && (
+        <Form title="UPCOMING">
+          {upcoming.map(movie =>
+           <Poster
+           key={movie.id}
+           id={movie.id}
+           imageUrl={movie.poster_path}
+           title={movie.original_title}
+           rating={movie.vote_average}
+           year={movie.release_date.substring(0, 4)}
+           isMovie={true}
+         />
+         
+       )}
+        </Form>
+        
+        
+)}
+</Container>
+<Container> 
+      {popular && popular.length > 0 && (
+        <Form title="Top Popular">
+          {popular.map(movie =>
+           <Poster
+           key={movie.id}
+           id={movie.id}
+           imageUrl={movie.poster_path}
+           title={movie.original_title}
+           rating={movie.vote_average}
+           year={movie.release_date.substring(0, 4)}
+           isMovie={true}
+         />
+         
+       )}
+        </Form>
+        
+        
 )}
 </Container>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router,Route } from 'react-router-dom';
+import { HashRouter as Router,Redirect,Route, Switch } from 'react-router-dom';
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
 // import styled from "styled-components"
 import Home from "../Home";
@@ -12,17 +12,20 @@ import Header from "./Header";
 
 
 
-export default ({location})=>{
+export default ()=>{
     return(
     <>
     <Router>
         <Header/>
+        <Switch>
         <Route path="/" exact component={Home}/>
-        <Route path="/movie" component={Movie}/>
-        <Route path="/tv" component={Tv}/>
+        <Route path="/movie/:id" component={Movie}/>
+        <Route path="/tv/:id" component={Tv}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/login" component={Login}/>
         <Route path="/search" component={Search}/>
+        <Redirect from="*" to="/"/>
+        </Switch>
     </Router>
         </>
     )

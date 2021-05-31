@@ -12,13 +12,13 @@ const Container =styled.div`
 `;
 
 const ImageContainer=styled.div`
-    background-color: #ecf0f1;
+    background-color: black;
     padding: 50px;
     margin-bottom:5px;
     position: relative;
     box-shadow: 5px 5px rgba(0,0,0,0.6), -1em 0 .4em rgba(0,0,0,0.5);
     &:hover{
-            opacity:0.6;
+            opacity:0.9;
 
     }
 `;
@@ -39,7 +39,7 @@ transition: opacity 0.6s linear;
 `;
 
 const Rating=styled.span`
-color:black;
+color:white;
 font-size: 15px;
 font-weight: 600;
 `;

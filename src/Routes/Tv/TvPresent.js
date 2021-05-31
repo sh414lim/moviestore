@@ -17,7 +17,7 @@ const Header=styled.header`
 
 `
 const IMG=styled.img`
-  width: 300px;
+  width: 200px;
 height: 300px;
 box-shadow: 5px 5px rgba(0,0,0,0.6), -1em 0 .4em rgba(0,0,0,0.5);
 border-radius: 10%;
@@ -66,7 +66,7 @@ const settings={
       }
     ]
   }
-  const dramaPresenter=({loading,error,airingToday})=> loading ? null : (
+  const dramaPresenter=({loading,error,toprated,airingToday,onTheAir,popular})=> loading ? null : (
 <>
 
         <Header>
@@ -83,14 +83,14 @@ const settings={
             </StyledSlider>
         </Header>
     <Container> 
-      {airingToday && airingToday.length > 0 && (
-        <Form title="AiringToday">
-          {airingToday.map(drama =>
+      {toprated && toprated.length > 0 && (
+        <Form title="TOP Rank">
+          {toprated.map(drama =>
            <Poster
            key={drama.id}
            id={drama.id}
            imageUrl={drama.poster_path}
-           title={drama.original_name}
+           title={drama.name}
            rating={drama.vote_average}
            year={drama.first_air_date.substring(0, 4)}
            isdrama={true}
@@ -98,6 +98,64 @@ const settings={
          
        )}
         </Form>
+        
+)}
+</Container>
+<Container> 
+      {airingToday && airingToday.length > 0 && (
+        <Form title="AiringToday">
+          {airingToday.map(drama =>
+           <Poster
+           key={drama.id}
+           id={drama.id}
+           imageUrl={drama.poster_path}
+           title={drama.name}
+           rating={drama.vote_average}
+           year={drama.first_air_date.substring(0, 4)}
+           isdrama={true}
+         />
+         
+       )}
+        </Form>
+        
+)}
+</Container>
+<Container> 
+      {onTheAir && onTheAir.length > 0 && (
+        <Form title="onTheAir">
+          {onTheAir.map(drama =>
+           <Poster
+           key={drama.id}
+           id={drama.id}
+           imageUrl={drama.poster_path}
+           title={drama.name}
+           rating={drama.vote_average}
+           year={drama.first_air_date.substring(0, 4)}
+           isdrama={true}
+         />
+         
+       )}
+        </Form>
+        
+)}
+</Container>
+<Container> 
+      {popular && popular.length > 0 && (
+        <Form title="Top Popular">
+          {popular.map(drama =>
+           <Poster
+           key={drama.id}
+           id={drama.id}
+           imageUrl={drama.poster_path}
+           title={drama.name}
+           rating={drama.vote_average}
+           year={drama.first_air_date.substring(0, 4)}
+           isdrama={true}
+         />
+         
+       )}
+        </Form>
+        
 )}
 </Container>
 </>
