@@ -15,7 +15,7 @@ export const MovieApi={
     upcoming:()=>api.get("/3/movie/upcoming"),
     nowplaying:()=>api.get("/3/movie/now_playing"),
     movieDetail:id=>
-    api.get(`movie/${id}`,{
+    api.get(`/3/movie/${id}`,{
         params:{
             append_to_response:"videos"
         }
