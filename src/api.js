@@ -19,6 +19,11 @@ export const MovieApi={
         params:{
             append_to_response:"videos"
         }
+    }),
+    searchMvoie:(term)=>api.get("/3/search/movie",{
+        params:{
+            query:encodeURIComponent(term)
+        }
     })
 }
 
@@ -56,6 +61,11 @@ popular:()=>api.get("/3/tv/popular",{
 showDetail:id=>api.get(`/3/tv/${id}`,{
     params:{
         append_to_response:"videos"
+    }
+}),
+searchTv:(term)=>api.get("/3/search/tv",{
+    params:{
+        query:encodeURIComponent(term)
     }
 })
 }
