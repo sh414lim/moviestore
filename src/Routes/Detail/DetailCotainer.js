@@ -31,7 +31,7 @@ export default class extends React.Component{
         let result=null;
 
         try{
-            if(isMovie){
+            if(isMovie !== ""){
                 ({data:result}= await MovieApi.movieDetail(parseId))
             }
                 ({data:result}=await TvApi.showDetail(parseId))
