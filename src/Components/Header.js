@@ -51,6 +51,7 @@ color:inherit;
 function Header({location:{pathname}}){
 return(
     <>
+    <Login/>
 
     <Head>
                <Title><LINK to="/">|SHOP|</LINK></Title>
