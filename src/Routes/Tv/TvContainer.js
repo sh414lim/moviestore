@@ -65,7 +65,6 @@ export default class TvContainer extends React.Component{
         
     render(){
         const {airingToday,toprated,onTheAir,popular,error,loading}=this.state;
-        console.log(this.state)
         return(
             <TvPresent
             aringToday={airingToday}

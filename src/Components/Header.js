@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Link, withRouter} from "react-router-dom";
+import Login from "./Login";
 
 const Head = styled.header`
     height: 28vh;
@@ -50,6 +51,8 @@ color:inherit;
 function Header({location:{pathname}}){
 return(
     <>
+    <Login/>
+
     <Head>
                <Title><LINK to="/">|SHOP|</LINK></Title>
         <Ul>
@@ -69,6 +72,7 @@ return(
             </Li>
         </Ul>
     </Head>
+
     </>
 )
 }
