@@ -1,20 +1,20 @@
 import React from 'react';
-import GoogleLogin from 'react-google-login';
+import {GoogleLogin} from 'react-google-login';
 
-const clientId = "OAuth Web Client ID";
+const clientId = "90969144529-4r64ccts34g2b0582lr6ojosclgcftra.apps.googleusercontent.com";
 
 export default function GoogleButton({ onSocial }){
     const onSuccess = async(response) => {
     	console.log(response);
     
-        const { googleId, profileObj : { email, name } } = response;
+        // const { googleId, profileObj : { email, name } } = response;
         
-        await onSocial({
-            socialId : googleId,
-            socialType : 'google',
-            email,
-            nickname : name
-        });
+        // await onSocial({
+        //     socialId : googleId,
+        //     socialType : 'google',
+        //     email,
+        //     nickname : name
+        // });
     }
 
     const onFailure = (error) => {
@@ -24,7 +24,7 @@ export default function GoogleButton({ onSocial }){
     return(
         <div>
             <GoogleLogin
-                clientId={"90969144529-e4oaqn0ddsid220o94prgpvi8dp86dnu.apps.googleusercontent.com"}
+                clientId={clientId}
                 responseType={"id_token"}
                 onSuccess={onSuccess}
                 onFailure={onFailure}/>
