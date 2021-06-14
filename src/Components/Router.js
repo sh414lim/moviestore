@@ -5,8 +5,8 @@ import { HashRouter as Router,Redirect,Route, Switch } from 'react-router-dom';
 import Home from "../Home";
 import Movie from "../Routes/Movie"
 import Tv from "../Routes/Tv"
-import SignUp from "../Routes/SignUp"
-import Login from "../Routes/Login"
+import register from "../pages/RegisterPage";
+import Login from "../pages/LoginPages";
 import Search from "../Routes/Search"
 import Header from "./Header";
 import Detail from "../Routes/Detail";
@@ -24,7 +24,7 @@ export default ()=>{
         <Route path="/movie/:id" component={Detail}/>
         <Route path="/tv" exact component={Tv}/>
         <Route path="/tv/:id" component={Detail}/>
-        <Route path="/signup" component={SignUp}/>
+        <Route path="/register" component={register}/>
         <Route path="/login" component={Login}/>
         <Route path="/search" component={Search}/>
         <Redirect from="*" to="/"/>

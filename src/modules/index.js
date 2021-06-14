@@ -1,12 +1,15 @@
+import { all } from "@redux-saga/core/effects";
 import {combineReducers} from "redux";
-import auth from "./auth";
+import auth, { authSaga } from "./auth";
+import loading from "./loading";
 
-
-//루트 리듀서 생성
-
-const rootReducer =combineReducers({
-
+const rootReducer=combineReducers({
     auth,
+    loading,
 });
+
+export function* rootSaga(){
+    yield all([authSaga()]);
+}
 
 export default rootReducer;
