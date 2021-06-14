@@ -8,7 +8,7 @@ export default function GoogleButton({ onSocial }){
     	console.log(response);
     
         // const { googleId, profileObj : { email, name } } = response;
-        
+      
         // await onSocial({
         //     socialId : googleId,
         //     socialType : 'google',
