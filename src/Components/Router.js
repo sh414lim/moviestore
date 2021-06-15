@@ -10,6 +10,12 @@ import Login from "../Routes/Login"
 import Search from "../Routes/Search"
 import Header from "./Header";
 import Detail from "../Routes/Detail";
+import LoginPages from "../Routes/pages/LoginPages";
+import RegisterPage from "../Routes/pages/RegisterPage";
+import WriterPages from "../Routes/pages/WriterPages";
+import PostPage from "../Routes/pages/PostPage";
+import PostListPage from "../Routes/pages/PostListPage";
+import board from "../containers/Container"
 
 
 
@@ -25,8 +31,13 @@ export default ()=>{
         <Route path="/tv" exact component={Tv}/>
         <Route path="/tv/:id" component={Detail}/>
         <Route path="/signup" component={SignUp}/>
-        <Route path="/login" component={Login}/>
         <Route path="/search" component={Search}/>
+        <Route path="/login" component={LoginPages}/>
+      <Route path="/register" component={RegisterPage}/>
+      <Route path="/write" component={WriterPages}/>
+      <Route path="/board" component={board}/>
+      <Route path={["/@:username","/"]}exact component={PostListPage}/>
+      <Route path={["/@:username","/postId"]} component={PostPage}/>
         <Redirect from="*" to="/"/>
         </Switch>
     </Router>
