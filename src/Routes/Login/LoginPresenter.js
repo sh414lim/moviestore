@@ -1,17 +1,16 @@
 import React from "react";
 import Form from "../../Form/AuthForm"
 import Template from "../../Form/AuthTemplate"
+import Login from "../../Components/Login";
 
 
-const registerPresetner =()=>{
+const LoginPresenter =()=>{
     return(
         <Template>
-            <Form type="register"/>
+            <Form type="login"/>
+            <Login/>
         </Template>
             )
 }
 
-
-export default registerPresetner;
-
-
+export default LoginPresenter;

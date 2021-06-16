@@ -1,3 +1,3 @@
-import LogPresent from "./LogPresent";
+import LoginPresenter from "./LoginPresenter";
 
-export default LogPresent;
+export default LoginPresenter;
