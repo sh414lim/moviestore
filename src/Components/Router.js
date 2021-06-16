@@ -6,7 +6,6 @@ import Home from "../Home";
 import Movie from "../Routes/Movie"
 import Tv from "../Routes/Tv"
 import SignUp from "../Routes/SignUp"
-import Login from "../Routes/Login"
 import Search from "../Routes/Search"
 import Header from "./Header";
 import Detail from "../Routes/Detail";
