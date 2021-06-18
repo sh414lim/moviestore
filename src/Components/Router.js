@@ -10,7 +10,7 @@ import Header from "./Header";
 import Detail from "../Routes/Detail";
 import Login from "../Routes/Login";
 import SignUp from "../Routes/SignUp";
-
+import Counter from "../Components/Counter"
 
 
 export default ()=>{
@@ -27,6 +27,7 @@ export default ()=>{
         <Route path="/search" component={Search}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={SignUp}/>
+        <Route path="/counter" component={Counter}/>
         <Redirect from="*" to="/"/>
         </Switch>
     </Router>

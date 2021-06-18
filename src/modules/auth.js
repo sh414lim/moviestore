@@ -5,8 +5,9 @@ import {createAction,handleActions} from "redux-actions";
 import product from "immer";
 
 
-const CHANGE_FIELD
+const CHANGE_FIELD="";
 
+const SAMPLE_ACTION="null";
 
 
 
