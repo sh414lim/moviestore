@@ -1,9 +1,22 @@
 import React from "react";
+import AuthForm from "../../Form/AuthForm";
+import AuthTemplate from "../../Form/AuthTemplate";
+
+
+
+
+
+
+
 
 
 const registerPresetner =()=>{
     return(
-        <h1>register</h1>
+        <AuthTemplate>
+            <AuthForm type="register"/>
+        </AuthTemplate>
+
+
             )
 }
 

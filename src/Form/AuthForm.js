@@ -7,6 +7,11 @@ import Button from "./Button";
 import palette from "../Components/palette";
 
 
+/*
+회원가입 또는 로그인 폼
+*/
+
+
 
 const AuthFormBlock=styled.div`
 h3{
@@ -58,30 +63,53 @@ const textMap={
 }
 
 
-const AuthForm=({type})=>{
+//type props에 따라 다른 내용을 보여준다
+//type 값에 따라 사용되는 문구가 달리지고 type 이 register 일때는 비밀번호 확인 인풋도 보여진다
 
-        const text=textMap[type];
+//컨테이너 넣어주었던 onChange,onSubmit form 사용
 
+const AuthForm=({type,form,onChange,onSubmit})=>{
+    const text=textMap[type];
     return(
         <AuthFormBlock>
             <h3>{text}</h3>
-            <form>
-                <StyleInput autoComplete="username" name="username" placeholder="아이디"/>
-                <StyleInput autoComplete="new-password" name="password" placeholder="비밀번호" type="password"/>
-                {type ==='register' && (
-                <StyleInput autoComplete="new-password" name="passwordConfirm" placeholder="비밀번호 확인"  type="password"/>
-                )}
-        <Button cyan fullWidth style={{marginTop:'1rem'}}>{text}</Button>
+            <form onSubmit={onSubmit}>
+            <StyleInput
+                 autoComplete="username" 
+                 name="username" 
+                 placeholder="아이디" 
+                 onChange={onChange} 
+                 value={form.username}
+                 />
+
+                        <StyleInput
+                autoComplete="new-password"
+                name="new-password"
+                placeholder="비밀번호"
+                onChange={onChange}
+                value={form.passowrd}
+                />
+                {type === "register"(
+                             <StyleInput
+                             autoComplete="new-password"
+                             name="passowrdConfirm"
+                             placeholder="비밀번호 확인"
+                             onChange={onChange}
+                             value={form.passowrdConfirm}
+                             />
+    )}
+    <button>{text}</button>
             </form>
             <Footer>
                 {type === 'login' ? (
-                    <Link to="/register">회원가입</Link>
+                    <Link to ='/registre'>회원가입</Link>
                 ):(
-                    <Link to="/login">로그인</Link>
-                    )}
+                    <Link to ='/login'>로그인</Link>
+                )}
             </Footer>
         </AuthFormBlock>
-    )
-}
+    );
+};
+
 
 export default AuthForm;
