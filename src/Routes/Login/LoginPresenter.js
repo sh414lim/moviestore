@@ -1,5 +1,4 @@
 import React from "react";
-import AuthForm from "../../Form/AuthForm";
 import AuthTemplate from "../../Form/AuthTemplate";
 import LoginForm from "../../container/auth/LoginForm";
 

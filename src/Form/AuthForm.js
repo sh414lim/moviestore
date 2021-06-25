@@ -89,7 +89,7 @@ const AuthForm=({type,form,onChange,onSubmit})=>{
                 onChange={onChange}
                 value={form.passowrd}
                 />
-                {type === "register"(
+                {type === "register" &&(
                              <StyleInput
                              autoComplete="new-password"
                              name="passowrdConfirm"

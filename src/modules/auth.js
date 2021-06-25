@@ -2,7 +2,7 @@
 //Ducks 패턴(액션타입,액션생성함수,리듀가를 하나의 파일에서관리)
 
 import{createAction,handleActions} from "redux-actions";
-import produe, { produce } from "immer";
+import produce  from "immer";
 
 
 const  CHANGE_FIELD='auth/CHANGE_FIELD';
