@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../conmon/Button";
 import {Link} from "react-router-dom";
-import palette from "../../lib/palette";
+import palette from "../lib/palette";
 
 // 회원가입 또는 로그인 폼을 보여 준다
 
