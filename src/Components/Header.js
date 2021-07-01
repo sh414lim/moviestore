@@ -3,47 +3,35 @@ import styled from "styled-components";
 import {Link, withRouter} from "react-router-dom";
 
 const Head = styled.header`
-    height: 28vh;
-    width: 100vw;
-    height: 200px;
-    display:grid;
-    gap:10px;
-    color: white;
-    &:hover{
-        opacity:0.3;
-        background-color: red;
-        transition: background-color 0.6s  ease-in-out  ;
-    }
-    margin-top: 50px;
-    margin-bottom: 50px;
+   
 `;
 
 const Title =styled.h1`
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 60px;
+    justify-content: flex-start;
+    font-size: 40px;
     font-weight: 100;
         color:black;
 
 `;
 
 const Ul=styled.ul`
-    display: flex;
-    justify-content: space-around;
-    font-size: 20px;
+   display: flex;
+   margin-top: 13px;
+justify-content: space-around;
+width: 60%;
+
 `;
 
 const Li=styled.li`
-    &:hover{
-        color:black;
-        transition: color 0.6s ease-in-out;
-    }
+display: flex;
+    font-size: 20px;
+    padding-top: 12px;
 `;
 
 const LINK=styled(Link)`
-text-decoration: none;
-color:inherit;
+
 `;
 
 
@@ -52,8 +40,8 @@ return(
     <>
 
     <Head>
-               <Title><LINK to="/">|SHOP|</LINK></Title>
         <Ul>
+        <Title><LINK to="/">|SHOP|</LINK></Title>
             <Li>
                 <LINK to="/movie" currnet={pathname === "/movie"}>Movie</LINK>
             </Li>

@@ -1,26 +1,11 @@
 import React from "react";
-import AuthForm from "../../Form/AuthForm";
-import AuthTemplate from "../../Form/AuthTemplate";
 
-
-
-
-
-
-
-
-
-const registerPresetner =()=>{
+const Register=()=>{
     return(
-        <AuthTemplate>
-            <AuthForm type="register"/>
-        </AuthTemplate>
-
-
-            )
+        <>
+        <h1>HeLLOW wORLD</h1>
+        </>
+    )
 }
 
-
-export default registerPresetner;
-
-
+export default Register;

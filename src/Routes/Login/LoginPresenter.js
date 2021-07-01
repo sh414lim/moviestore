@@ -1,15 +1,11 @@
 import React from "react";
-import AuthTemplate from "../../Form/AuthTemplate";
-import LoginForm from "../../container/auth/LoginForm";
 
-
-const LoginPresenter =()=>{
+const Register=()=>{
     return(
-        <AuthTemplate>
-           <LoginForm/>
-        </AuthTemplate>
-
-            )
+        <>
+        <h1>HeLLOW wORLD</h1>
+        </>
+    )
 }
 
-export default LoginPresenter;
+export default Register;
