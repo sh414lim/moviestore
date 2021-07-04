@@ -12,10 +12,11 @@ const Title =styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 50px;
+    margin-top: 150px;;
 `;
 
-const Grid =styled.div`
+const Text =styled.div`
     display: flex;
     flex-wrap: wrap;
     padding: 0px 50px;
@@ -27,7 +28,7 @@ const Grid =styled.div`
 const Section = ({ title, children }) => (
     <Container>
       <Title>{title}</Title>
-      <Grid>{children}</Grid>
+      <Text>{children}</Text>
     </Container>
   );
 
