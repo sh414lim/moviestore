@@ -31,7 +31,7 @@ class MapContent extends Component {
   
   const MapContents = styled.div`
     width: 100%;
-    height: 1000px;
+    height: 500px;
   `;
   
   export default MapContent;
