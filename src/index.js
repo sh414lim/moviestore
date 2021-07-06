@@ -5,10 +5,12 @@ import{Provider} from "react-redux";
 import {createStore,applyMiddleware} from "redux";
 import {composeWithDevTools} from "redux-devtools-extension";
 import createSaGaMiddleware from "redux-saga";
-import rootReducer, {rootSaga} from "./modules";
+import  {rootSaga} from "./modules";
+import rootReducer  from "./modules/rootReducer";
 import {tempSetUser,check} from "./modules/user"
 //리덕스 스토어 생성
 const sagaMiddleware =createSaGaMiddleware();
+// const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 const store=createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(sagaMiddleware)),

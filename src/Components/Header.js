@@ -65,6 +65,9 @@ return(
             <Li current={pathname === "/login"}>
                 <LINK to="/login" currnet={pathname === "/login"}>Login</LINK>
             </Li>
+            <Li current={pathname === "/register"}>
+                <LINK to="/register" currnet={pathname === "/register"}>register</LINK>
+            </Li>
         </Ul>
     </Head>
 

@@ -20,7 +20,7 @@ const [LOGIN,LOGIN_SUCCESS,LOGIN_FAILURE]= createRequestActionTypes(
     );
 
 
-export const changedField=createAction(
+export const changeField=createAction(
     CHANGE_FIELD,
     ({form,key,value})=>({
         form, // register , login
