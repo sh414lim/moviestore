@@ -25,13 +25,13 @@ class MapContent extends Component {
     }
   
     render() {
-      return <MapContents id="Mymap"></MapContents>;
+      return <MapContents id="Mymap">1</MapContents>;
     }
   }
   
   const MapContents = styled.div`
     width: 100%;
-    height: 100%;
+    height: 1000px;
   `;
   
   export default MapContent;
