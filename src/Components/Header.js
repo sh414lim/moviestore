@@ -79,6 +79,11 @@ function Header({ location: { pathname } }) {
               About
             </LINK>
           </Li>
+          <Li current={pathname === '/border'}>
+            <LINK to="/border" currnet={pathname === '/border'}>
+              Border
+            </LINK>
+          </Li>
         </Ul>
       </Head>
     </>

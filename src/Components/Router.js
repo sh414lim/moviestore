@@ -16,6 +16,8 @@ import Detail from '../Routes/Detail';
 import Login from '../Routes/Login';
 import SignUp from '../Routes/SignUp';
 import About from '../About';
+import Border from '../BorderPresenter';
+
 
 export default () => {
   return (
@@ -32,6 +34,7 @@ export default () => {
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={SignUp} />
+          <Route path="/border" component={Border} />
           <Redirect from="*" to="/" />
         </Switch>
       </Router>
