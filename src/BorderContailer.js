@@ -61,7 +61,7 @@ useEffect(()=>{
     });
 },[onChangeField]);
 
-const onChangeTitle=e=>{
+const onChangeTitle = e =>{
     onChangeField({key:'title',value:e.target.value});
 };
 
