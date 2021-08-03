@@ -65,11 +65,16 @@
          <Tag onClick={()=>onRemove(tag)}>#{tag}</Tag>
      ))
  
+     
  //React.memo를 사용하여 tags 값ㅇㅣ바뀔때만 리렌더링 되도록 처리
  const TagList=React.memo(({tags,onRemove})=>(
+     
      <TagListBlcok>
--     
-+        { tags.map((tag)  =>(<TagItem key={tag} tag={tag} onRemove={onRemove}/>)
+         {
+
+
+         }
+            {tags &&  tags.map(tag => <TagItem key={tag} tag={tag} onRemove={onRemove}/>
              
          )}
 
