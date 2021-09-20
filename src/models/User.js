@@ -23,7 +23,7 @@ export default User;
 */ 
 
 // 두번째 종류 스태틱 메소드
-//
+
 /*
 
 
